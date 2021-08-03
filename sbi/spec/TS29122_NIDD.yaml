@@ -975,6 +975,8 @@ components:
         - SEND_TRIGGER: send a device trigger
     PdnEstablishmentOptionsRm:
       description: Represents the same information as the PdnEstablishmentOptions data type with the difference that it allows also the null value.
+      $ref: '#/components/schemas/AnyOfPdnEstablishmentOptionsNull'
+    AnyOfPdnEstablishmentOptionsNull:
       anyOf: 
         - $ref: '#/components/schemas/PdnEstablishmentOptions'
         - $ref: 'TS29571_CommonData.yaml#/components/schemas/NullValue'

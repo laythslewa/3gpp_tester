@@ -505,6 +505,8 @@ components:
 
     AppAmContextExpRespData:
       description: It represents a response to a modification or creation request of an Individual Application AM resource. It may contain the notification of the already met events
+      $ref: '#/components/schemas/AnyOfAppAmContextDataAmEventsNotification'
+    AnyOfAppAmContextDataAmEventsNotification:
       anyOf:
         - $ref: 'TS29534_Npcf_AMPolicyAuthorization.yaml#/components/schemas/AppAmContextData'
         - $ref: 'TS29534_Npcf_AMPolicyAuthorization.yaml#/components/schemas/AmEventsNotification'

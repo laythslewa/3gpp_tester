@@ -706,7 +706,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AccessAndMobilitySubscriptionData'
+                $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/AccessAndMobilitySubscriptionData'
           headers:
             Cache-Control:
               description: Cache-Control containing max-age, as described in RFC 7234, 5.2
@@ -2196,7 +2196,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PpData'
+                $ref: 'TS29503_Nudm_PP.yaml#/components/schemas/PpData'
           headers:
             Cache-Control:
               description: Cache-Control containing max-age, as described in RFC 7234, 5.2
@@ -3481,7 +3481,7 @@ paths:
               schema:
                type: array
                items:
-                $ref: '#/components/schemas/SdmSubscription'
+                $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/SdmSubscription'
         default:
           $ref: 'TS29571_CommonData.yaml#/components/responses/default'
 
@@ -3508,7 +3508,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SdmSubscription'
+              $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/SdmSubscription'
         required: true
       responses:
         '201':
@@ -3516,7 +3516,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SdmSubscription'
+                $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/SdmSubscription'
           headers:
             Location:
               description: 'Contains the URI of the newly created resource, according to the structure: {apiRoot}/nudr-dr/<apiVersion>/subscription-data/{ueId}/context-data/sdm-subscriptions/{subsId}'
@@ -3554,7 +3554,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SdmSubscription'
+              $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/SdmSubscription'
         required: true
       responses:
         '204':
@@ -4130,6 +4130,8 @@ paths:
         - oAuth2ClientCredentials:
           - nudr-dr
           - nudr-dr:subscription-data
+        - oAuth2ClientCredentials:
+          - nudr-sdm
       parameters:
         - name: ueId
           in: path
@@ -5038,7 +5040,7 @@ components:
       type: object
       properties:
         amData:
-          $ref: '#/components/schemas/AccessAndMobilitySubscriptionData'
+          $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/AccessAndMobilitySubscriptionData'
         smfSelData:
           $ref: '#/components/schemas/SmfSelectionSubscriptionData'
         smsSubsData:
@@ -5359,7 +5361,7 @@ components:
         sdmSubscriptions:
           type: array
           items:
-            $ref: '#/components/schemas/SdmSubscription'
+            $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/SdmSubscription'
           minItems: 1
         eeSubscriptions:
           type: array

@@ -229,12 +229,7 @@ components:
         sub:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/NfInstanceId'
         aud:
-          anyOf:
-            - $ref: 'TS29510_Nnrf_NFManagement.yaml#/components/schemas/NFType'
-            - type: array
-              items:
-                $ref: 'TS29571_CommonData.yaml#/components/schemas/NfInstanceId'
-              minItems: 1
+          $ref: '#/components/schemas/AnyOfNFTypeArrayOfNfInstanceId'
         scope:
           type: string
           pattern: '^([a-zA-Z0-9_:-]+)( [a-zA-Z0-9_:-]+)*$'
@@ -256,6 +251,13 @@ components:
           minItems: 1
         producerNfSetId:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/NfSetId'
+    AnyOfNFTypeArrayOfNfInstanceId:
+      anyOf:
+        - $ref: 'TS29510_Nnrf_NFManagement.yaml#/components/schemas/NFType'
+        - type: array
+          items:
+            $ref: 'TS29571_CommonData.yaml#/components/schemas/NfInstanceId'
+          minItems: 1
 
     AccessTokenErr:
       description: Error returned in the access token response message

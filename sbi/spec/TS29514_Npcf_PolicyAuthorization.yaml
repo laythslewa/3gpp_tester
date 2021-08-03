@@ -1590,6 +1590,8 @@ components:
 #
     EventsSubscPutData:
       description: Identifies the events the application subscribes to within an Events Subscription sub-resource data. It may contain the notification of the already met events
+      $ref: '#/components/schemas/AnyOfEventsSubscReqDataEventsNotification'
+    AnyOfEventsSubscReqDataEventsNotification:
       anyOf:
         - $ref: '#/components/schemas/EventsSubscReqData'
         - $ref: '#/components/schemas/EventsNotification'
@@ -1863,6 +1865,8 @@ components:
 #        
     PreemptionControlInformationRm:
       description: This data type is defined in the same way as the PreemptionControlInformation data type, but with the OpenAPI nullable property set to true.
+      $ref: '#/components/schemas/AnyOfPreemptionControlInformationNullValue'
+    AnyOfPreemptionControlInformationNullValue:
       anyOf:
         - $ref: '#/components/schemas/PreemptionControlInformation'
         - $ref: 'TS29571_CommonData.yaml#/components/schemas/NullValue'

@@ -1833,9 +1833,7 @@ components:
         subscribedDnnList:
           type: array
           items:
-            anyOf:
-              - $ref: 'TS29571_CommonData.yaml#/components/schemas/Dnn'
-              - $ref: 'TS29571_CommonData.yaml#/components/schemas/WildcardDnn'
+            $ref: '#/components/schemas/AnyOfDnnWildcardDnn'
         serviceGapTime:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/DurationSec'
         mdtUserConsent:
@@ -2007,9 +2005,7 @@ components:
         - dnn
       properties:
         dnn:
-          anyOf:
-            - $ref: 'TS29571_CommonData.yaml#/components/schemas/Dnn'
-            - $ref: 'TS29571_CommonData.yaml#/components/schemas/WildcardDnn'
+          $ref: '#/components/schemas/AnyOfDnnWildcardDnn'
         defaultDnnIndicator:
           $ref: '#/components/schemas/DnnIndicator'
         lboRoamingAllowed:
@@ -2027,6 +2023,10 @@ components:
           minItems: 1
         sameSmfInd:
           type: boolean
+    AnyOfDnnWildcardDnn:
+      anyOf:
+        - $ref: 'TS29571_CommonData.yaml#/components/schemas/Dnn'
+        - $ref: 'TS29571_CommonData.yaml#/components/schemas/WildcardDnn'
 
     Nssai:
       type: object

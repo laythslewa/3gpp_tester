@@ -39,18 +39,26 @@ paths:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1ue-update-confirmation-data~1subscribed-cag'
   /subscription-data/{ueId}/ue-update-confirmation-data/subscribed-snssais:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1ue-update-confirmation-data~1subscribed-snssais'
+
+  ######################################################################
   /subscription-data/{ueId}/{servingPlmnId}/provisioned-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1%7BservingPlmnId%7D~1provisioned-data'
   /subscription-data/{ueId}/{servingPlmnId}/provisioned-data/am-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1%7BservingPlmnId%7D~1provisioned-data~1am-data'
+  ######################################################################
+
   /subscription-data/{ueId}/{servingPlmnId}/provisioned-data/smf-selection-subscription-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1%7BservingPlmnId%7D~1provisioned-data~1smf-selection-subscription-data'
   /subscription-data/{ueId}/{servingPlmnId}/provisioned-data/sm-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1%7BservingPlmnId%7D~1provisioned-data~1sm-data'
   /subscription-data/{ueId}/{servingPlmnId}/provisioned-data/lcs-bca-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1%7BservingPlmnId%7D~1provisioned-data~1lcs-bca-data'
+
+  ######################################################################
   /subscription-data/{ueId}/context-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1context-data'
+  ######################################################################
+
   /subscription-data/{ueId}/context-data/amf-3gpp-access:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1context-data~1amf-3gpp-access'
   /subscription-data/{ueId}/context-data/amf-non-3gpp-access:
@@ -79,8 +87,12 @@ paths:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1lcs-privacy-data'
   /subscription-data/{ueId}/lcs-mo-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1lcs-mo-data'
+
+  ######################################################################
   /subscription-data/{ueId}/pp-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1pp-data'
+  ######################################################################
+
   /subscription-data/{ueId}/context-data/ee-subscriptions:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1context-data~1ee-subscriptions'
   /subscription-data/{ueId}/context-data/ee-subscriptions/{subsId}:
@@ -105,10 +117,14 @@ paths:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1group-data~15g-vn-groups~1pp-profile-data'
   /subscription-data/{ueId}/ee-profile-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1ee-profile-data'
+
+  ######################################################################
   /subscription-data/{ueId}/context-data/sdm-subscriptions:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1context-data~1sdm-subscriptions'
   /subscription-data/{ueId}/context-data/sdm-subscriptions/{subsId}:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1%7BueId%7D~1context-data~1sdm-subscriptions~1%7BsubsId%7D'
+  ######################################################################
+
   /subscription-data/shared-data:
     $ref: 'TS29505_Subscription_Data.yaml#/paths/~1subscription-data~1shared-data'
   /subscription-data/subs-to-notify:

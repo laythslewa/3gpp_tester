@@ -37,9 +37,7 @@ paths:
           description: Identifier of the UE
           required: true
           schema: 
-            anyOf:
-              - $ref: 'TS29571_CommonData.yaml#/components/schemas/VarUeId'
-              - $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/ExtGroupId'
+            $ref: '#/components/schemas/AnyOfVarUeIdExtGroupId'
         - name: supported-features
           in: query
           description: Features required to be supported by the target NF
@@ -708,6 +706,11 @@ components:
         maximumLatency:
           $ref: 'TS29571_CommonData.yaml#/components/schemas/DurationSec'
       nullable: true
+
+    AnyOfVarUeIdExtGroupId:
+      anyOf:
+        - $ref: 'TS29571_CommonData.yaml#/components/schemas/VarUeId'
+        - $ref: 'TS29503_Nudm_SDM.yaml#/components/schemas/ExtGroupId'
 
 
 # SIMPLE TYPES:
